@@ -11,12 +11,15 @@ In order to set your environment up to run the code here, first install all requ
 ```shell
 pip install -r requirements.txt
 ```
+Rename `example.env` to `.env` and edit the variables appropriately.
+```
+mv example.env .env
 
 Then, download the LLM model and place it in a directory of your choice:
 - LLM: default to [ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin). If you prefer a different GPT4All-J compatible model, just download it and reference it in your `.env` file.
+!mkdir -p models
+!wget -P models/ https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin
 
-Rename `example.env` to `.env` and edit the variables appropriately.
-```
 MODEL_TYPE: supports LlamaCpp or GPT4All
 PERSIST_DIRECTORY: is the folder you want your vectorstore in
 MODEL_PATH: Path to your GPT4All or LlamaCpp supported LLM
@@ -53,7 +56,7 @@ The supported extensions are:
 Run the following command to ingest all the data.
 
 ```shell
-python ingest.py
+python dive.py
 ```
 
 Output should look like this:
@@ -79,7 +82,7 @@ Note: during the ingest process no data leaves your local environment. You could
 In order to ask a question, run a command like:
 
 ```shell
-python privateGPT.py
+python standAloneGPT.py
 ```
 
 And wait for the script to require your input.
