@@ -1,4 +1,13 @@
 # standAloneGPT revision from privateGPT
+Here are the revisions I made to the privateGPT scripts:
+1- Added missing import statements for required modules.
+2- Handled and displayed error messages if there are missing environment variables or errors during initialization.
+3- Enclosed the main functionality within a main() function for better code organization.
+4- Refactored the code to improve readability and maintainability, including proper indentation, variable naming, and separation of concerns.
+5- Added a command-line argument parser to handle optional flags for hiding source documents and muting the streaming stdout callback.
+
+These revisions aim to enhance the clarity, error handling, and modularity of the code, providing a more robust and user-friendly experience when running the script.
+------------------------------------------------------
 Ask questions to your documents without an internet connection, using the power of LLMs. 100% private, no data leaves your execution environment at any point. You can ingest documents and ask questions without an internet connection!
 
 Built with [LangChain](https://github.com/hwchase17/langchain), [GPT4All](https://github.com/nomic-ai/gpt4all), [LlamaCpp](https://github.com/ggerganov/llama.cpp), [Chroma](https://www.trychroma.com/) and [SentenceTransformers](https://www.sbert.net/).
